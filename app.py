@@ -34,13 +34,13 @@ def identify_cluster(data_point):
     return cluster_index
 
 # Streamlit app
-st.title('Resolute AI Intern Assignment Outputs')
+st.title('# Resolute AI Intern Assignment Outputs')
 
 # Task 1: Clustering
-st.subheader('Task 1: Clustering')
+st.subheader('## Task 1: Clustering')
 
 # User input for all 18 values
-st.subheader('Enter values for T1 to T18:')
+st.subheader('### Enter values for T1 to T18:')
 values = []
 for i in range(18):
     values.append(st.number_input(f'T{i+1}', step=1))
@@ -78,7 +78,7 @@ st.pyplot(plt)
 predictions_df = pd.read_csv('predicted target values for test set.csv')
 
 # Task 2: Classification
-st.subheader('Task 2: Classification')
+st.subheader('## Task 2: Classification')
 
 # Display predictions DataFrame
 st.write("### Predictions of target values for the test set:")
@@ -88,7 +88,7 @@ st.write(predictions_df)
 output_df = pd.read_csv('output.csv')
 
 # Add a subheader for Task 3
-st.subheader("Task 3: Python")
+st.subheader("## Task 3: Python")
 
 # Display the DataFrame
 st.write("### Results derived from rawdata:")
