@@ -5,7 +5,7 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.decomposition import PCA
 
 # Load the dataset
-df = pd.read_csv('your_dataset.csv')
+df = pd.read_csv('train.csv')
 
 # Encode the 'target' column into numerical labels
 label_encoder = LabelEncoder()
