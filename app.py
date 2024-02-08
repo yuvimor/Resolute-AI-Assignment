@@ -73,3 +73,26 @@ plt.tight_layout()
 
 # Show plot
 st.pyplot(plt)
+
+# Load predictions DataFrame
+predictions_df = pd.read_csv('predicted target values for test set.csv')
+
+# Task 2: Classification
+st.subheader('Task 2: Classification')
+
+# Display predictions DataFrame
+st.write("### Predictions")
+st.write(predictions_df)
+
+# Display link to download predictions
+st.write("### Download Predictions")
+st.write("Click the link below to download the predictions as a CSV file:")
+st.markdown(get_binary_file_downloader_html('predicted target values for test set.csv', 'Download Predictions'), unsafe_allow_html=True)
+
+# Function to generate download link
+def get_binary_file_downloader_html(bin_file, file_label='File'):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    bin_str = data
+    href = f'<a href="data:file/csv;base64,{bin_str}" download="{bin_file}">{file_label}</a>'
+    return href
