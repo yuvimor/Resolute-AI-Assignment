@@ -81,5 +81,15 @@ predictions_df = pd.read_csv('predicted target values for test set.csv')
 st.subheader('Task 2: Classification')
 
 # Display predictions DataFrame
-st.write("### Predictions of target values for the test set")
+st.write("### Predictions of target values for the test set:")
 st.write(predictions_df)
+
+# Load the output.csv file
+output_df = pd.read_csv('output.csv')
+
+# Add a subheader for Task 3
+st.subheader("Task 3: Python")
+
+# Display the DataFrame
+st.write("### Results derived from rawdata:")
+st.write(output_df)
